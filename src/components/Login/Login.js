@@ -2,29 +2,26 @@ import React,{useState,useContext} from 'react'
 import {app} from '../../Base.js'
 import './Login.css'
 import { useNavigate } from 'react-router-dom'
-import { LoginContext } from '../../Context/LoginContext'
-import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword,onAuthStateChanged } from 'firebase/auth'
+import { getAuth, signInWithEmailAndPassword} from 'firebase/auth'
+import { LoginContext } from '../../Context/LoginContext.js'
 function Login() {
-  const {email,setEmail,setIsLoggedIn,IsLoggedIn}=useContext(LoginContext)
+  const {setUser}=useContext(LoginContext)
+  const [email,setEmail]=useState('')
   const [password,setPassword]=useState('')
   const navigate=useNavigate()
-  const handleSubmit=(e)=>{
+  const authentication = getAuth(app);
+  const handleSubmit=async (e)=>{
     e.preventDefault()
-    const authentication = getAuth(app);
-    signInWithEmailAndPassword(authentication, email, password).then((response) => {
-      console.log(response)
+    try{
+      const res=await signInWithEmailAndPassword(authentication,email,password)
+      setUser(res.user)
       navigate('/')
-      console.log(authentication)
-          }).catch((error)=>{
-            alert(error.message)
-          })
-          onAuthStateChanged(authentication, (user) => {
-            if (user) {
-              setEmail(user.email)
-            } else {
-              console.log("Guest")
-            }
-          });
+      console.log(res.user)
+    }
+    catch(err){
+      alert(err.message)
+    }
+
   }
 
   return (

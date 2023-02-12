@@ -1,17 +1,17 @@
 import React,{useContext} from 'react'
 import { useNavigate } from 'react-router-dom'
-import { LoginContext } from '../../Context/LoginContext.js'
 import Header from '../Header/Header.js'
 import {app} from '../../Base.js'
 import { signOut,getAuth } from 'firebase/auth'
+import { LoginContext } from '../../Context/LoginContext.js'
 function Home({children}) {
-  const {email,setEmail,setIsLoggedIn}=useContext(LoginContext)
-  
+  const {user,setUser}=useContext(LoginContext)
   const navigate=useNavigate()
   const auth=getAuth(app)
   const handleSignout=(e)=>{
       signOut(auth).then(()=>{
-        setEmail('Guest')
+        setUser(null)
+        navigate('/login')
       }).catch((error)=>{
         console.log(error)
       })
@@ -19,7 +19,7 @@ function Home({children}) {
   return (
     <> 
     <Header/>
-    <div>Hello, {email}</div>
+    <div>Hello, {user?user.email:'Guest'}</div>
     <button onClick={handleSignout}>Signout</button>
     {children}
     </>

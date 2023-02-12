@@ -3,20 +3,22 @@ import './SignUp.css'
 import { LoginContext } from '../../Context/LoginContext'
 import { useNavigate } from 'react-router-dom'
 import {app} from '../../Base.js'
-import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword,onAuthStateChanged } from 'firebase/auth'
+import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth'
 function SignUp() {
     const navigate=useNavigate()
-    const {email,setEmail} =useContext(LoginContext)
+    const [email,setEmail]=useState('')
     const [password,setPassword]=useState('')
-    const handleSubmit=e=>{
+    const authentication = getAuth(app);
+    const handleSubmit=async (e)=>{
         e.preventDefault()
-        const authentication = getAuth(app);
-        createUserWithEmailAndPassword(authentication, email, password).then((response) => {
-         console.log(response)
-         navigate('/login')
-          }).catch((error)=>{
-            alert(error.message)
-          })
+        try{
+          const res =await createUserWithEmailAndPassword(authentication,email,password)
+          console.log(res)
+          navigate('/')
+        }
+        catch(err){
+          alert(err.message)
+        }
           
     }
   return (
