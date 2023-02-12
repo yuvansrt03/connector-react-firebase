@@ -1,0 +1,29 @@
+.container{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container>*{
+    margin: .5rem;
+    height: 2rem;
+    width: 20rem;
+    padding: 5px;
+}
+.container input{
+    font-size: 18px;
+}
+.container button{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+
+.page-header{
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
