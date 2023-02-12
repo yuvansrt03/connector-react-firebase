@@ -1,21 +1,164 @@
-.container{
+*{
+    margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    overflow-y: hidden;
+}
+.login{
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.login-left-panel{
+    position: relative;
+    height: 100vh;
+    width: 46%;
+}
+
+.login-big-circle{
+    position: absolute;
+    width: 1450px;
+    height: 1200px;
+    left: -700px;
+    top: -500px;
+    border-radius:60%;
+    background: #2F93E9;
+    transform: rotate(120deg);
+    z-index: -1;
+}
+.login-left-desc-container{
+    position: relative;
     height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-.container>*{
-    margin: .5rem;
-    height: 2rem;
-    width: 20rem;
-    padding: 5px;
+.login-left-logo{
+    height: 130px;
 }
-.container input{
-    font-size: 18px;
-}
-.container button{
-    background-color: black;
+
+.login-left-desc-container h2{
     color: white;
-    border-radius: 5px;
+    font-size: 30px;
+    
+}
+
+.login-left-desc-container h3{
+    color: white;
+    font-size: 17px;
+    width: 70%;
+    text-align: center;
+    font-weight: 400;
+}
+
+.login-left-signup{
+    font-size: 20px;
+    background-color: transparent;
+    padding: 10px 45px;
+    color: white;
+    border: 1px solid white;
+    margin-top: 25px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.login-left-signup:hover{
+    color: black;
+    background-color: white;
+    border:1px solid black
+}
+.login-left-landing-illus{
+    z-index: -1 ;
+    height: 400px;
+    transform: translate(-20%,-5%);
+}
+
+.login-right-panel{
+    height: 100vh;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-sign-in-text{
+    font-size: 40px;
+    font-weight: bold;
+}
+.login-right-panel >div{
+    padding: 15px;
+}
+.login-input-div{
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.login-username-logo,.login-password-logo{
+    height: 80%;
+    margin-right: 10px;
+}
+.login-input-div >input{
+    width: 250px;
+    height: 100%;
+    font-size: 16px;
+    border-radius: 20px;
+    padding: 10px;
+    border: 1px solid grey;
+    box-sizing: border-box;
+}
+.login-input-div >input:focus{
+    outline: none;
+    border:2px solid #2F93E9;
+}
+.login-button{
+    font-size: 15px;
+    background-color: #2F93E9;
+    padding: 10px 45px;
+    color: white;
+    border: 1px solid white;
+    margin-top: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.login-button:hover{
+    background-color: #329fff;
+}
+.login-button:active{
+    background-color: #2472b6;
+}
+.login-right-panel h3{
+    margin:15px;
+    font-size: 15px;
+}
+
+.login-socialicons-list{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 200px;
+}
+.login-socialicons-list>span{
+    height: 20px;
+    width: 20px;
+    background-color:#2F93E9;
+    padding: 10px;
+    border-radius: 50%;
+}
+.login-socialicons-list>span:hover{
+    background-color: #2472b6;
+}
+.login-icon-images{
+    height: 20px
+}
+.login-error{
+    margin-top: 10px;
+    color: red;
+    font-size: 10px
 }

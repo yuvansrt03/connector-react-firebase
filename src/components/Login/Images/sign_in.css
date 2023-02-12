@@ -1,0 +1,166 @@
+body{
+    margin: 0px;
+    display: flex;
+    overflow: hidden;
+}
+.lefthalf{
+    height: 100vh;
+    width:50%;
+    background-color:#fff;
+    display:flex;
+    justify-content: center;
+}
+.signin{
+    height: 100vh;
+    width:50%;
+    background-color:#fff ;
+}
+.designpartsignin{
+position: absolute;
+width: 1450px;
+height: 1150px;
+left: -600px;
+top: -350px;
+border-radius:60%;
+background: #2F93E9;
+transform: rotate(130.47deg);
+}
+.logosi{
+    position:absolute;
+    height: 50vh;
+    top:50px;
+}
+.logosi h2{
+    position:absolute;
+    top:50px;
+    left:80px;
+    color:#fff;
+    font-size: 35px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    line-height: 121px;
+}
+.logosi .logoco{
+    width:350px;
+    
+}
+.logosi p{
+    position:absolute;
+    top:160px;
+    right:-80px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 100px;
+    font-size: 20px;
+    width: 500px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.logosi p:nth-of-type(2){
+    position: absolute;
+    top:250px;
+    left:115px;
+    border: solid white;
+    width:100px;
+    padding:8px;
+    border-radius:50px ;
+
+}
+.illustrationsi{
+    position:absolute;
+    height: 50vh;
+    top: 50%;
+}
+.illustrationsi img{
+    width:600px;
+    height:500px;
+}
+.signin{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.signin img:nth-of-type(1){
+    width: 40px;
+    height: 44px;
+}
+.signin img:nth-of-type(2){
+    width: 42px;
+    height: 42px;
+}
+.signin .username{
+    display: flex;
+    position:absolute;
+    top:250px;
+    border-radius: 50px;
+}
+.signin .password{
+    display:flex;
+    position:absolute;
+    top:350px;
+}
+.signin .username input{
+    border-color: #2F93E9;
+    margin-left: 10px;
+    border-radius: 50px;
+    width: 400px;
+    height:50px;
+    
+}
+.signin .username input{
+    border-color: #2F93E9;
+    margin-left: 10px;
+    border-radius: 50px;
+    width: 350px;
+    height:50px;
+    padding-left:20px;
+    font-size: 25px;
+    
+}
+.signin .password input{
+    border-color: #2F93E9;
+    margin-left: 10px;
+    border-radius: 50px;
+    width: 350px;
+    height:50px;
+    padding-left:20px;
+    font-size: 25px;
+
+}
+
+.signin h2{
+    position: absolute;
+    top:80px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 45px;
+    line-height: 121px;
+}
+.signin p:nth-of-type(1){
+    background-color: #2F93E9;
+    padding:15px 25px;
+    position: absolute;
+    top:430px;
+    border-radius:50px;
+    color:white;
+    font-family: 'Inter';
+}
+.signin p:nth-of-type(2){
+    position: absolute;
+    top:515px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+}
+.socialicons{
+    position: absolute;
+    top:580px;
+}
+.socialicons .iconso{
+    margin:10px  20px;
+    width: 12px;
+    height: 12px;
+}
