@@ -5,14 +5,14 @@ import { useNavigate } from 'react-router-dom'
 import { getAuth, signInWithEmailAndPassword} from 'firebase/auth'
 import { LoginContext } from '../../Context/LoginContext.js'
 
-import brand_logo_white from './Images/connector_white.png'
-import landing_left_illus from './Images/landing_left.png'
-import user_logo from './Images/user.png'
-import password_logo from './Images/padlock.png'
-import google_logo from './Images/google.png'
-import facebook_logo from './Images/facebook.png'
-import twitter_logo from './Images/twitter.png'
-import linkedin_logo from './Images/linkedin.png'
+import brand_logo_white from '../Images/connector_white.png'
+import landing_left_illus from '../Images/landing_left.png'
+import user_logo from '../Images/user.png'
+import password_logo from '../Images/padlock.png'
+import google_logo from '../Images/google.png'
+import facebook_logo from '../Images/facebook.png'
+import twitter_logo from '../Images/twitter.png'
+import linkedin_logo from '../Images/linkedin.png'
 
 
 
@@ -34,18 +34,17 @@ function Login() {
     catch(err){
       setErr(err.message)
     }
-
   }
 
   return (
-    <div className="login">
+    <div className="login" style={{overflow:'hidden'}}>
       <div className="login-left-panel">
+        <div className="login-big-circle"></div>
         <div className="login-left-desc-container">
-          <div className="login-big-circle"></div>
           <img src={brand_logo_white} className="login-left-logo"alt="" />
           <h2>New Here?</h2>
           <h3>To connect with your like minded buddies login with your personal info</h3>
-          <button className='login-left-signup'>SIGN UP</button>
+          <button className='login-left-signup' onClick={()=>navigate('/signup')}>SIGN UP</button>
           <img src={landing_left_illus} className="login-left-landing-illus" alt="" />
         </div>
       </div>
@@ -67,7 +66,7 @@ function Login() {
             <span className="login-iconso"><img src={facebook_logo} className="login-icon-images" /></span>
             <span className="login-iconso"><img src={twitter_logo}  className="login-icon-images"/></span> 
             <span className="login-iconso"><img src={linkedin_logo} className="login-icon-images"/></span>
-          </div>
+        </div>
       </div>
     </div>
   )

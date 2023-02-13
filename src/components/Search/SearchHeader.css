@@ -1,0 +1,90 @@
+*{
+    margin: 0px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.search-header{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    background-color: white;
+    align-items: center;
+    justify-content: space-around;
+}
+.brand_logo{
+    height: 70px;
+}
+.search-collection{
+    width:max-content;
+    height: 50px;
+    background-color: rgba(226,228,228,255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgba(118,118,118,255);
+    border-radius: 17px;
+    overflow: hidden;
+}
+.search-collection >div{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    font-size: 14px;
+    padding: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+    
+}
+.search-collection>div:hover{
+    background-color:rgb(199, 199, 199);
+}
+.search-collection >div >*{
+    margin: 2px;
+
+}
+.search-collection >button{
+    height: 100%;
+    width: 100px;
+    background-color:rgba(47,147,233,255) ;
+    color: white;
+    border: none;
+    border-radius: 17px;
+    font-size: 14px;
+}
+.search-collection>button:hover{
+    background-color:rgba(47,107,233,255) ;
+
+}
+.search-collection-icons{
+    height: 16px;
+}
+
+.search-login-signup{
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 300px;
+    border-left: 3px solid rgba(47,147,233,255);
+}
+.search-login{
+    border: 0px;
+    margin: 0px 15px;
+    background-color: white;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 15px 20px;
+    border-radius: 30px;
+    font-size: 17px;
+}
+.search-signup{
+    border: 0px;
+    margin: 0px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: rgba(47,147,233,255);
+    padding: 15px 20px;
+    border-radius: 30px;
+    font-size: 15px;
+}

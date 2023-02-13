@@ -3,9 +3,8 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 body{
-    height: 100vh;
-    width: 100vw;
-    overflow-y: hidden;
+    height: max-content;
+    overflow-x: hidden;
 }
 .login{
     height: 100%;
@@ -36,6 +35,7 @@ body{
     height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
 }
 .login-left-logo{
